@@ -11,9 +11,9 @@ function Component({ urlCarrier }) {
             .then(({ default: WebViewer }) => {
                 WebViewer(
                     {
-                        path: '/webviewer/lib',
+                        path: 'lib',
                         initialDoc: urlCarrier,
-                        licenseKey: 'demo:1700108189437:7cdaeb2003000000003a17f465409ed7f97196ebccc9ce201c6052c965'  // sign up to get a free trial key at https://dev.apryse.com
+                        licenseKey: "License key"
                     },
                     viewer.current
                 )
@@ -52,7 +52,7 @@ function Component({ urlCarrier }) {
 
     return (
         <div className=''>
-            <div className='webviewer' ref={viewer} style={{ height: '100vh', backgroundColor: 'red' }}>
+            <div className='webviewer' ref={viewer} style={{ height: '100vh' }}>
                 <div style={{ height: '95vh', background: 'blue' }}>{urlCarrier}
 
                 </div>
